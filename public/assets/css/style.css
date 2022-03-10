@@ -41,7 +41,7 @@
       .crementor::after, .crementor::before {
           content: "";
           position: absolute;
-          right: 10px;
+          right: 14px;
           top: 5px;
           border-radius: 50%;
           width: 50px;
