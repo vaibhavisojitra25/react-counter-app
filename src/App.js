@@ -14,7 +14,7 @@ let incrementCount = () => {
 let decrementCount = () => {
   if (count === 0) {
     return;
-}
+  }
   setCount(count - 1);
 };
  //reset counter 
@@ -22,8 +22,13 @@ let decrementCount = () => {
   setCount(0)
 }
 
-const onChange = (event) => {
-  setCount(event.target.value);
+let onChange = (event) => {
+  if (event.target.value < 0) {
+    setCount(0);
+  }else{
+    setCount(event.target.value);
+  }
+  
 };
 
 return (
@@ -32,7 +37,7 @@ return (
         <div className="center">
           <div className="crementor">
           <Button classname={"crementor__min"} title={"-"} action={decrementCount} />
-          <input className="crementor__value" value={count} type="number" onChange={onChange} />
+          <input className="crementor__value" value={count} type="number" min="0" onChange={onChange} />
           <Button classname={"crementor__plus"} title={"+"} action={incrementCount} />
           </div>
           <button type="button" className="btn btn-danger" onClick={reset}>Reset</button>
