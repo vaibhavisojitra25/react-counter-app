@@ -1,0 +1,165 @@
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #fff;
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: #77aee6;
+      background: -webkit-linear-gradient(250deg,#406bd8 0,#9cdbef 100%);
+      background: linear-gradient(145deg,#9cdbef 0,#406bd8 90%);
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .crementor{
+      
+      width: 200px;
+      box-shadow: 2px 4px 16px #33333390;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      position: relative;
+      overflow: hidden;
+  }
+      .crementor::after, .crementor::before {
+          content: "";
+          position: absolute;
+          right: 10px;
+          top: 5px;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          box-shadow: 0px 0px 0px 60px #eee;
+      }
+      .crementor:before {
+          left:10px; 
+          right: auto;
+      }
+  
+      .crementor button {
+          flex: 0 0 auto;
+          border-radius: 60px;
+          height: 50px;
+          width: 50px;
+          border: 0;
+          margin: 10px;
+          background: transparent;
+          box-shadow: 2px 2px 8px #33333390 inset;
+          z-index: 99;
+          outline-style: none;
+          background: #eeeeee30;
+          
+          font-size: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .crementor button::after, .crementor button i  {
+          content: "";
+          display: block;
+          background-color: #eee;
+          height: 3px;
+          width: 20px;
+          box-shadow: 2px 2px 4px #33333390;
+          position : absolute;
+          background-color: #7aca1d;
+      }
+  
+      
+      .crementor button::before, .crementor button i{
+          content: "";
+          display: block;
+          background-color: #eee;
+          height: 20px;
+          width: 3px;
+          position: absolute;
+          box-shadow: 2px 2px 4px #33333390;
+          background-color: #7aca1d;
+  
+      }
+      .crementor button i{
+          box-shadow: none;
+          z-index: 99;
+          background-color: #7aca1d;
+      }
+          
+      .crementor button.crementor__min::before, .crementor button.crementor__min i {
+          opacity: 0;
+          box-shadow: none;
+          
+      }
+      .crementor button.crementor__min:after {
+          background-color: #c00;
+      }
+      /* .crementor button.crementor__plus {
+          margin-left: 0;
+      } */
+      .crementor button:hover{
+       
+  
+          background-color: #7aca1d59;
+          transition: all .6s;
+      }
+      .crementor button:hover::before, .crementor button:hover::after, i{
+          transform: scale(1.1);
+          background-color: #fff;
+      }
+      
+      .crementor button:hover.crementor__min {
+          background-color: #c006;
+          transition: all .6s;
+      }
+  
+      .crementor input{
+          position: relative;
+          z-index: 9;
+          flex: 0 1 0;
+          max-width: calc(100% - 145px);
+      display: block;
+      flex-basis: 100%;
+          text-align: center;
+          background: transparent;
+          border: 0;
+          font-size: 30px;
+      }
+  
+  
+  .footnote {
+      position: absolute;
+      bottom: 0;
+      padding: 30px;
+      color: #eee;
+  }
+  
+  
+  .btn {
+    border-radius: 10px !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,30%);
+    position: relative;
+    padding: 1em 1.5em !important;
+  }
+  
+  .btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+  }
